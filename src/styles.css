@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: pink;
+  font-family: "poppins";
+  margin: 0;
+}
+header {
+  background-color: plum;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.search {
+  background-color: transparent;
+  border: 2px solid;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #000fff;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  width: 500px;
+}
+#search::placeholder {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+.search:focus {
+  background-color: rgb(206, 202, 202);
+  outline: none;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie {
+  background-color: skyblue;
+  border-radius: 3px;
+  box-shadow: 0 4px 5px (0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  width: 300px;
+}
+.movie img {
+  width: 100%;
+}
+.movie-info {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-info span {
+  background-color: rosybrown;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 2px;
+}
+.overview {
+  background-color: gray;
+  color: white;
+  padding: 2rem;
+  position: absolute;
+  max-height: 100%;
+  overflow: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+.overview h3 {
+  margin-top: 0;
+}
+.movie:hover .overview {
+  transform: translateY(0);
+}
